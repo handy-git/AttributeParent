@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>AttributeParent</artifactId>
+        <groupId>cn.handyplus.attribute</groupId>
+        <version>1.0.0</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>AttributeSystem</artifactId>
+
+    <properties>
+        <AttributeSystem.version>1.4.1</AttributeSystem.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.skillw.attributesystem.taboolib.platform.BukkitPlugin</groupId>
+            <artifactId>AttributeSystem</artifactId>
+            <version>${AttributeSystem.version}</version>
+            <optional>true</optional>
+        </dependency>
+    </dependencies>
+
+</project>

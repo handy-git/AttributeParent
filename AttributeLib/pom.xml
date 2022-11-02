@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>AttributeParent</artifactId>
+        <groupId>cn.handyplus.attribute</groupId>
+        <version>1.0.0</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>AttributeLib</artifactId>
+
+    <properties>
+        <attribute.version>1.0.0</attribute.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>cn.handyplus.attribute</groupId>
+            <artifactId>AttributeSystem</artifactId>
+            <version>1.0.0</version>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>cn.handyplus.attribute</groupId>
+            <artifactId>AttributePlus</artifactId>
+            <version>1.0.0</version>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>cn.handyplus.attribute</groupId>
+            <artifactId>SX-AttributeLow</artifactId>
+            <version>1.0.0</version>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>cn.handyplus.attribute</groupId>
+            <artifactId>SX-Attribute</artifactId>
+            <version>1.0.0</version>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>cn.handyplus.attribute</groupId>
+            <artifactId>MmoItems</artifactId>
+            <version>1.0.0</version>
+            <optional>true</optional>
+        </dependency>
+    </dependencies>
+
+</project>
