@@ -21,14 +21,13 @@
             <groupId>net.Indyuce</groupId>
             <artifactId>MMOItems</artifactId>
             <version>${MMOItems.version}</version>
-            <scope>provided</scope>
+            <optional>true</optional>
         </dependency>
         <dependency>
             <groupId>io.lumine</groupId>
             <artifactId>MythicLib</artifactId>
             <version>${MythicLib.version}</version>
             <optional>true</optional>
-            <scope>provided</scope>
         </dependency>
     </dependencies>
 
