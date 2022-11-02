@@ -31,7 +31,7 @@ public class AttributeUtil {
      *
      * @return this
      */
-    public AttributeUtil getInstance(Plugin plugin) {
+    public static AttributeUtil getInstance(Plugin plugin) {
         PLUGIN = plugin;
         init();
         return INSTANCE;
