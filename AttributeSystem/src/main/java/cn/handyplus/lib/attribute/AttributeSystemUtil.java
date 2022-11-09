@@ -1,4 +1,4 @@
-package cn.handyplus.attribute;
+package cn.handyplus.lib.attribute;
 
 import com.skillw.attsystem.api.AttrAPI;
 import org.bukkit.entity.Player;

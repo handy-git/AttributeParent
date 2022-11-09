@@ -1,4 +1,4 @@
-package cn.handyplus.attribute;
+package cn.handyplus.lib.attribute;
 
 import io.lumine.mythic.lib.api.player.EquipmentSlot;
 import net.Indyuce.mmoitems.MMOItems;

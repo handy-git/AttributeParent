@@ -1,4 +1,4 @@
-package cn.handyplus.attribute;
+package cn.handyplus.lib.attribute;
 
 import github.saukiya.sxattribute.SXAttribute;
 import github.saukiya.sxattribute.data.attribute.SXAttributeData;

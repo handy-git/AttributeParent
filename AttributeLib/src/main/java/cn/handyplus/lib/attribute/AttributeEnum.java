@@ -1,4 +1,4 @@
-package cn.handyplus.attribute;
+package cn.handyplus.lib.attribute;
 
 /**
  * 属性类型

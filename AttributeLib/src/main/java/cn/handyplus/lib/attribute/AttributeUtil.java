@@ -1,4 +1,4 @@
-package cn.handyplus.attribute;
+package cn.handyplus.lib.attribute;
 
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
