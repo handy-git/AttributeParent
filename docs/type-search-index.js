@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"cn.handyplus.lib.attribute","l":"AttributeEnum"},{"p":"cn.handyplus.lib.attribute","l":"AttributeUtil"}];updateSearchResults();
