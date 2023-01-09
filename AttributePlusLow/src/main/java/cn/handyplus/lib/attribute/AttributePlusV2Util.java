@@ -2,7 +2,7 @@ package cn.handyplus.lib.attribute;
 
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.Plugin;
-import org.serverct.ersha.api.AttributeAPI;
+import org.serverct.ersha.jd.AttributeAPI;
 
 import java.util.List;
 
@@ -11,19 +11,19 @@ import java.util.List;
  *
  * @author handy
  */
-public class AttributePlusUtil {
+public class AttributePlusV2Util {
 
-    private AttributePlusUtil() {
+    private AttributePlusV2Util() {
     }
 
-    private static final AttributePlusUtil INSTANCE = new AttributePlusUtil();
+    private static final AttributePlusV2Util INSTANCE = new AttributePlusV2Util();
 
     /**
      * 获取唯一实例
      *
      * @return this
      */
-    protected static AttributePlusUtil getInstance() {
+    protected static AttributePlusV2Util getInstance() {
         return INSTANCE;
     }
 
@@ -35,7 +35,7 @@ public class AttributePlusUtil {
      * @param attributeList 属性
      */
     protected void addAttribute(Plugin plugin, Player player, List<String> attributeList) {
-        AttributeAPI.addSourceAttribute(AttributeAPI.getAttrData(player), plugin.getName(), attributeList);
+        AttributeAPI.addAttribute(player, plugin.getName(), attributeList, false);
     }
 
     /**
@@ -45,7 +45,7 @@ public class AttributePlusUtil {
      * @param player 玩家
      */
     protected void removeAttribute(Plugin plugin, Player player) {
-        AttributeAPI.takeSourceAttribute(AttributeAPI.getAttrData(player), plugin.getName());
+        AttributeAPI.deleteAttribute(player, plugin.getName());
     }
 
 }

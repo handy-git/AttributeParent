@@ -15,7 +15,8 @@ import java.util.List;
 public class AttributeUtil {
 
     private static Plugin PLUGIN;
-    private static boolean USE_AP;
+    private static boolean USE_AP_3;
+    private static boolean USE_AP_2;
     private static boolean USE_AS;
     private static boolean USE_SX_3;
     private static boolean USE_SX_2;
@@ -54,8 +55,11 @@ public class AttributeUtil {
         attributeList = replaceChatColor(attributeList);
         switch (attributeEnum) {
             case ALL:
-                if (USE_AP) {
+                if (USE_AP_3) {
                     AttributePlusUtil.getInstance().addAttribute(PLUGIN, player, attributeList);
+                }
+                if (USE_AP_2) {
+                    AttributePlusV2Util.getInstance().addAttribute(PLUGIN, player, attributeList);
                 }
                 if (USE_AS) {
                     AttributeSystemUtil.getInstance().addAttribute(PLUGIN, player, attributeList);
@@ -71,8 +75,11 @@ public class AttributeUtil {
                 }
                 break;
             case ATTRIBUTE_PLUS:
-                if (USE_AP) {
+                if (USE_AP_3) {
                     AttributePlusUtil.getInstance().addAttribute(PLUGIN, player, attributeList);
+                }
+                if (USE_AP_2) {
+                    AttributePlusV2Util.getInstance().addAttribute(PLUGIN, player, attributeList);
                 }
                 break;
             case ATTRIBUTE_SYSTEM:
@@ -107,8 +114,11 @@ public class AttributeUtil {
     public void removeAttribute(Player player, AttributeEnum attributeEnum) {
         switch (attributeEnum) {
             case ALL:
-                if (USE_AP) {
+                if (USE_AP_3) {
                     AttributePlusUtil.getInstance().removeAttribute(PLUGIN, player);
+                }
+                if (USE_AP_2) {
+                    AttributePlusV2Util.getInstance().removeAttribute(PLUGIN, player);
                 }
                 if (USE_AS) {
                     AttributeSystemUtil.getInstance().removeAttribute(PLUGIN, player);
@@ -124,8 +134,11 @@ public class AttributeUtil {
                 }
                 break;
             case ATTRIBUTE_PLUS:
-                if (USE_AP) {
+                if (USE_AP_3) {
                     AttributePlusUtil.getInstance().removeAttribute(PLUGIN, player);
+                }
+                if (USE_AP_2) {
+                    AttributePlusV2Util.getInstance().removeAttribute(PLUGIN, player);
                 }
                 break;
             case ATTRIBUTE_SYSTEM:
@@ -155,7 +168,7 @@ public class AttributeUtil {
      * 初始化版本
      */
     private static void init() {
-        USE_AP = Bukkit.getPluginManager().getPlugin("AttributePlus") != null;
+        // 加载as
         USE_AS = Bukkit.getPluginManager().getPlugin("AttributeSystem") != null;
         // 加载sx
         Plugin sxPlugin = Bukkit.getPluginManager().getPlugin("SX-Attribute");
@@ -165,6 +178,16 @@ public class AttributeUtil {
                 USE_SX_2 = true;
             } else {
                 USE_SX_3 = true;
+            }
+        }
+        // 加载ap
+        Plugin apPlugin = Bukkit.getPluginManager().getPlugin("AttributePlus");
+        if (sxPlugin != null) {
+            int firstPluginVersion = getFirstPluginVersion(sxPlugin);
+            if (firstPluginVersion < 3) {
+                USE_AP_2 = true;
+            } else {
+                USE_AP_3 = true;
             }
         }
         // 加载mmo属性

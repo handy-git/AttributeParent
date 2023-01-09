@@ -30,6 +30,12 @@
         </dependency>
         <dependency>
             <groupId>cn.handyplus.lib.attribute</groupId>
+            <artifactId>AttributePlusLow</artifactId>
+            <version>1.0.0</version>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>cn.handyplus.lib.attribute</groupId>
             <artifactId>SX-AttributeLow</artifactId>
             <version>1.0.0</version>
             <optional>true</optional>

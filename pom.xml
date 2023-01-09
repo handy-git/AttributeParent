@@ -12,6 +12,7 @@
 
     <modules>
         <module>AttributePlus</module>
+        <module>AttributePlusLow</module>
         <module>AttributeSystem</module>
         <module>SX-Attribute</module>
         <module>SX-AttributeLow</module>
