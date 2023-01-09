@@ -182,8 +182,8 @@ public class AttributeUtil {
         }
         // 加载ap
         Plugin apPlugin = Bukkit.getPluginManager().getPlugin("AttributePlus");
-        if (sxPlugin != null) {
-            int firstPluginVersion = getFirstPluginVersion(sxPlugin);
+        if (apPlugin != null) {
+            int firstPluginVersion = getFirstPluginVersion(apPlugin);
             if (firstPluginVersion < 3) {
                 USE_AP_2 = true;
             } else {
